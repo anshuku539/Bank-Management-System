@@ -1,0 +1,13 @@
+# Build artifacts
+*.exe
+*.obj
+*.o
+*.dll
+*.log
+
+# Data files
+bank_accounts.txt
+
+# Visual Studio/VS Code
+.vscode/
+*.user
