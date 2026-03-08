@@ -1,0 +1,300 @@
+/* Customer Portal Styles */
+
+:root {
+    --primary: #667eea;
+    --secondary: #764ba2;
+    --success: #28a745;
+    --danger: #dc3545;
+    --warning: #ffc107;
+    --info: #17a2b8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    overflow-y: auto;
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-header h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 20px 0;
+}
+
+.sidebar-menu li {
+    margin: 0;
+}
+
+.sidebar-menu a {
+    display: block;
+    padding: 12px 20px;
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    padding-left: 25px;
+}
+
+.sidebar-footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.logout-btn {
+    display: block;
+    padding: 12px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.logout-btn:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    margin-left: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-bar {
+    background: white;
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.page-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 30px;
+}
+
+/* Welcome Card */
+.welcome-card {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.welcome-card h2 {
+    margin-bottom: 10px;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+/* Account Cards */
+.account-card {
+    border-left: 4px solid var(--primary);
+}
+
+.account-card .balance {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.account-details {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Stats Cards */
+.stats-card {
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.stats-card.bg-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.stats-card.bg-success {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+}
+
+.stats-card.bg-warning {
+    background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%);
+}
+
+.stats-card.bg-info {
+    background: linear-gradient(135deg, #17a2b8 0%, #20c997 100%);
+}
+
+.stats-content h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.stats-content p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 14px;
+}
+
+.stats-icon {
+    font-size: 40px;
+    opacity: 0.8;
+}
+
+/* Tables */
+.table {
+    margin-bottom: 0;
+}
+
+.table tbody tr {
+    transition: background-color 0.2s;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    border: none;
+    color: white;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+    color: white;
+}
+
+/* Badges */
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+/* Forms */
+.form-control,
+.form-select {
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s;
+        z-index: 1000;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .page-content {
+        padding: 15px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .sidebar,
+    .top-bar,
+    .btn {
+        display: none;
+    }
+    
+    .page-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+}

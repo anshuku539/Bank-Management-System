@@ -1,0 +1,4 @@
+# Logs Directory
+
+Application error logs will be stored here.
+This directory needs write permissions for the web server.
